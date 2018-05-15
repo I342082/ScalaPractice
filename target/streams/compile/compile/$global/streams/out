@@ -1,0 +1,3 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\i342082\Desktop\MyProjects\ScalaPractice\src\main\scala\Main.scala:8:47: ')' expected but '.' found.[0m
+[0m[[0m[31merror[0m] [0m[0m  println("Division of 2 rationals: "rational1.divide(rational2))[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
