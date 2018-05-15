@@ -6,12 +6,16 @@ class Rational (val numerator: Int, val denominator: Int) {
   override def toString: String = s"$numerator/$denominator"
 
   def + (that: Rational): Rational = new Rational(this.numerator * that.denominator + that.numerator * this.denominator, this.denominator * that.denominator)
+  def + (that: Int): Rational = new Rational(this.numerator + that * this.denominator, this.denominator)
 
   def - (that: Rational): Rational = new Rational(this.numerator * that.denominator - that.numerator * this.denominator, this.denominator * that.denominator)
+  def - (that: Int): Rational = new Rational(this.numerator - that * this.denominator, this.denominator)
 
   def * (that: Rational): Rational = new Rational(this.numerator * that.numerator, this.denominator * that.denominator)
+  def * (that: Int): Rational = new Rational(this.numerator * that, this.denominator)
 
   def / (that: Rational): Rational = new Rational(this.numerator * that.denominator, this.denominator * that.numerator)
+  def / (that: Int): Rational = new Rational(this.numerator, this.denominator * that)
 
   def normalize: Rational = {
     def gcd(n1: Int, n2: Int): Int = {  // calculate Greatest Common Divisor for 2 numbers
