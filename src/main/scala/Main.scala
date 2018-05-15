@@ -31,4 +31,6 @@ object Main extends App {
   println(s"$rational1+$int2 = $diffInt = $normDiffInt")
   println(s"$rational1+$int2 = $prodInt = $normProdInt")
   println(s"$rational1+$int2 = $divInt = $normDivInt")
+
+  implicit def intToRational(x: Int): Rational = new Rational(x)
 }
